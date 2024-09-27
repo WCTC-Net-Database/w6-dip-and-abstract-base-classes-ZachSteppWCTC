@@ -1,5 +1,23 @@
 ### Week 6 Assignment: Dependency Inversion Principle (DIP) and Abstract Base Classes
 
+### New Abstractions
+
+Added an `IItem` interface, and a `ItemBase` abstract class for items including the properties `Name` and `Value` for it's gold value.
+Not containing many methods of their own, items are meant to be assigned to properties of other classes.
+
+`ILootable` characters no longer contain a string property for Treasure, instead containing the `Treasure` object, an item type with an additional description property.
+When the player character attacks a lootable opponent they recieve gold depending on the treasure item's value. The description of the item is printed.
+
+The player character's equipment property has been changed from a string to an array containing `Consumable`, an item type with an additional health property.
+Consumables can be eaten for some gained health using the player character's `UniqueBehavior`, removing it from their equipment.
+While a consumable item's value property isn't used right now, I plan for any item type to be tradeable for some specified amount of gold.
+
+`Wizards` now use `Mana` when cast spells, a property unique `ICastable` characters.
+
+The json file has been update to contain these new properties on specific characters.
+
+Other changes made include implementing character types and interfaces from previous assignments, adhering to DIP and other solid principles.
+
 ---
 ### Objective
 

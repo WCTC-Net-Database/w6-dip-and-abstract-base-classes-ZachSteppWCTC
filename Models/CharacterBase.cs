@@ -25,11 +25,14 @@ namespace W6_assignment_template.Models
             Console.WriteLine($"{Name} attacks {target.Name}");
             Console.ResetColor();
 
-            if (this is Player player && target is ILootable targetWithTreasure && !string.IsNullOrEmpty(targetWithTreasure.Treasure))
+            if (this is Player player && target is ILootable targetWithTreasure && !string.IsNullOrEmpty(targetWithTreasure.Treasure.Name))
             {
-                Console.WriteLine($"{Name} takes {targetWithTreasure.Treasure} from {target.Name}");
-                player.Gold += 10; // Assuming each treasure is worth 10 gold
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine($"{Name} takes {targetWithTreasure.Treasure.Name} from {target.Name}");
+                player.Gold += targetWithTreasure.Treasure.Value; // Gold is based on item's value
+                Console.WriteLine(targetWithTreasure.Treasure.Description);
                 targetWithTreasure.Treasure = null; // Treasure is taken
+                Console.ResetColor();
             }
             else if (this is Player playerWithGold && target is Player targetWithGold && targetWithGold.Gold > 0)
             {
@@ -39,7 +42,8 @@ namespace W6_assignment_template.Models
             }
         }
 
-        public void Move()
+
+        public virtual void Move()
         {
             Console.WriteLine($"{Name} moves.");
         }

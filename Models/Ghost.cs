@@ -2,11 +2,11 @@
 
 namespace W6_assignment_template.Models
 {
-    public class Ghost : CharacterBase, IFlyable
+    public class Ghost : CharacterBase, IFlyable, ILootable
     {
-        public string Treasure { get; set; }
+        public Treasure Treasure { get; set; }
 
-        public Ghost(string name, string type, int level, int hp, string treasure)
+        public Ghost(string name, string type, int level, int hp, Treasure treasure)
             : base(name, type, level, hp)
         {
             Treasure = treasure;
@@ -19,7 +19,7 @@ namespace W6_assignment_template.Models
 
         public override void UniqueBehavior()
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"{Name}'s presence chills the battlefield, stiffening everyone's movements.");
         }
     }
 }

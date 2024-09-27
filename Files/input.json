@@ -5,7 +5,18 @@
     "Type": "Fighter",
     "Level": 1,
     "HP": 10,
-    "Equipment": "sword|shield|potion",
+    "Equipment": [
+        {
+            "Name": "Cheese",
+            "Value": 5,
+            "Health": 4
+        },
+        {
+            "Name": "Bread",
+            "Value": 3,
+            "Health": 2
+        }
+    ],
     "Gold": 50
   },
   {
@@ -14,38 +25,73 @@
     "Type": "Goblin",
     "Level": 1,
     "HP": 5,
-    "Treasure": "club"
-  },
-  {
-    "$type": "W6_assignment_template.Models.Goblin",
-    "Name": "Tom Goblin",
-    "Type": "Goblin",
-    "Level": 1,
-    "HP": 5,
-    "Treasure": null
-  },
-  {
-    "$type": "W6_assignment_template.Models.Goblin",
-    "Name": "Boss Goblin",
-    "Type": "Goblin",
-    "Level": 1,
-    "HP": 10,
-    "Treasure": "leather armor"
-  },
-  {
-    "$type": "W6_assignment_template.Models.Ghost",
-    "Name": "Silent Ghost",
-    "Type": "Ghost",
-    "Level": 2,
-    "HP": 8,
-    "Treasure": "cloak"
-  },
-  {
-    "$type": "W6_assignment_template.Models.Ghost",
-    "Name": "Scary Ghost",
-    "Type": "Ghost",
-    "Level": 2,
-    "HP": 8,
-    "Treasure": null
-  }
+    "Treasure": {
+        "Name": "club",
+        "Value": 5,
+        "Description": "The hard, dried piece of wood barely passes for a weapon."
+    }
+   },
+   {
+        "$type": "W6_assignment_template.Models.Goblin",
+        "Name": "Tom Goblin",
+        "Type": "Goblin",
+        "Level": 1,
+        "HP": 5,
+        "Treasure": {
+            "Name": "diamond",
+            "Value": 100,
+            "Description":  "Creeper aw man"
+        }
+   },
+   {
+        "$type": "W6_assignment_template.Models.Goblin",
+        "Name": "Boss Goblin",
+        "Type": "Goblin",
+        "Level": 1,
+        "HP": 10,
+        "Treasure": {
+            "Name": "Sack of gold",
+            "Value": 39,
+            "Description" :  "That's a lot of gold"
+        }
+    },
+    {
+        "$type": "W6_assignment_template.Models.Ghost",
+        "Name": "Silent Ghost",
+        "Type": "Ghost",
+        "Level": 2,
+        "HP": 8,
+        "Treasure": {
+            "Name": "EMF Reader",
+            "Value": 23,
+            "Description":  "The piece of modern technology was probably taken from a ghost hunter."
+        }
+    },
+    {
+        "$type": "W6_assignment_template.Models.Ghost",
+        "Name": "Scary Ghost",
+        "Type": "Ghost",
+        "Level": 2,
+        "HP": 8,
+        "Treasure": {
+            "Name": "Music Box",
+            "Value": 13,
+            "Desciption": "It gives you a spooky feeling. Best not to play the song."
+        }
+    },
+    {
+        "$type": "W6_assignment_template.Models.Wizard",
+        "Name": "Gandalf",
+        "Type": "Wizard",
+        "Level": 5,
+        "HP": 15,
+        "Mana": 20
+    },
+    {
+        "$type": "W6_assignment_template.Models.Rogue",
+        "Name": "Tip Toe Joe",
+        "Type": "Rogue",
+        "Level": 2,
+        "HP": 10
+    }
 ]
